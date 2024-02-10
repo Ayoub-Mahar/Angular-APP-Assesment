@@ -1,0 +1,38 @@
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-6">
+      <a class="btn btn-primary" routerLink="/">Back to Home</a>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-6">
+      <button class="btn btn-primary" style="float: right;" (click)="addItem()">Add New Item</button>
+    </div>
+  </div>
+
+  <!-- New Information Section -->
+  <div class="row mt-3">
+    <div class="col-lg-12">
+      <h1>Item Page</h1>
+      <p>Welcome to the Item Page. This page displays information about items.</p>
+    </div>
+  </div>
+
+
+  <div class="card mt-2">
+    <div class="card-body">
+      <kendo-grid [data]="gridData" [pageSize]="pageSize" [skip]="skip" [pageable]="true" (pageChange)="pageChange($event)">
+        <kendo-grid-column field="id" title="S.No"></kendo-grid-column>
+        <kendo-grid-column field="name" title="Item Name"></kendo-grid-column>
+        <kendo-grid-column field="type" title="Item Type"></kendo-grid-column>
+        <kendo-grid-column field="description" title="Item Description"  [width]='300'></kendo-grid-column>
+        <kendo-grid-column field="date" title="Item Date"></kendo-grid-column>
+        <kendo-grid-column title="Actions" [width]="230">
+          <ng-template kendoGridCellTemplate let-dataItem>
+            &nbsp;
+            <button class="btn btn-danger btn-sm" (click)="deleteItem(dataItem.id)">Delete</button>
+          </ng-template>
+        </kendo-grid-column>
+      </kendo-grid>
+    </div>
+  </div>
+</div>

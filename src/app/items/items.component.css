@@ -1,0 +1,38 @@
+.actionCSS{
+    width:"200" !important;
+}
+
+.plus-icon::before {
+    content: '+';
+    font-size: 16px;
+    color: rgb(243, 240, 240); /* Change the color as needed */
+  }
+
+  /* View Icon */
+.view-icon::before {
+    content: '\1F441';
+    font-size: 16px;
+    color: blue; 
+  }
+  
+  /* Search Icon */
+  .search-icon::before {
+    content: '\1F50D'; 
+    font-size: 16px;
+    color: orange; 
+  }
+  
+  /* Delete Icon */
+  .delete-icon::before {
+    content: '\1F5D1'; 
+    font-size: 16px;
+    color: red; 
+  }
+  
+  /* Edit Icon */
+.edit-icon::before {
+    content: '\270E'; 
+    font-size: 16px;
+    color: green; 
+  }
+  
